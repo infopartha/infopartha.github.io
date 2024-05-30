@@ -9,10 +9,19 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <div class="menus">
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <!-- <button id="dark-mode-toggle">Toggle Dark Mode</button> -->
+        <a>Dark mode
+        <label class="switch"> 
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="slider round"></span>
+          </label>
+        </a>
     </div>
     <div class="wrapper">
         <div class="sidebar">
@@ -35,7 +44,7 @@
             <section id="home">
                 <h1>Hello!</h1>
                 <p>Welcome to My Portfolio</p>
-                <p>Hello! I'm Parthasarathy Rajendiran, a dedicated and skilled Machine Learning Engineer based in Toronto, ON, Canada. With over a decade of experience in data integration, machine learning, and artificial intelligence, I specialize in transforming complex data into actionable insights and innovative solutions. I'm passionate about applying my skills to real-world problems, especially in fields that benefit from advanced data analytics and AI technologies.</p>
+                <p>Hello! I'm Parthasarathy Rajendiran, a dedicated and skilled Machine Learning Engineer based in Kitchener, ON, Canada. With over a decade of experience in data integration, machine learning, and artificial intelligence, I specialize in transforming complex data into actionable insights and innovative solutions. I'm passionate about applying my skills to real-world problems, especially in fields that benefit from advanced data analytics and AI technologies.</p>
             </section>
             <section id="about">
                 <h1>About Me</h1>
@@ -86,6 +95,7 @@
             </section>
         </div>
     </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
 
