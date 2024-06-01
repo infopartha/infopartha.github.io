@@ -245,3 +245,74 @@ body.dark-mode h1, h2 {
 #contact-form button:hover {
     background-color: #555;
 }
+
+.skill-container {
+    overflow: hidden;
+  }
+
+.filterDiv {
+    float: left;
+    /* background-color: #2196F3; */
+    /* color: #ffffff; */
+    /* width: 100px; */
+    /* line-height: 100px; */
+    text-align: center;
+    margin: 2px;
+    display: none; /* Hidden by default */
+}
+
+.skill-button {
+    /* background-color: #ddd; */
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 1px;
+    /* cursor: pointer; */
+    border-radius: 16px;
+  }
+
+
+  .skill-button img {
+    height: 20px;
+    width: 20px;
+    margin-right: 3px;
+    vertical-align: middle;
+  }
+
+  .skill-button a {
+    color: #333;
+    text-decoration: none;
+}
+  /* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+  
+/* Style the buttons */
+.skill-group {
+    border: none;
+    outline: none;
+    padding: 6px 4px;
+    background-color: #c2c2c2;
+    cursor: pointer;
+}
+
+/* Add a light grey background on mouse-over */
+.skill-group:hover {
+    background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.skill-group.active {
+    background-color: #666;
+    color: white;
+}
+
+/* .body.dark-mode skill-button {
+    background-color: #5f5d5d;
+    color: #f2f2f2;
+} */

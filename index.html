@@ -56,19 +56,94 @@
             <section id="skills">
                 <h1>Skills</h1>
                 <h3>Technical Expertise</h3>
-                <ul>
-                    <li>Programming Languages: Python, SQL, PySpark, R, VBA Macro</li>
-                    <li>Machine Learning Tools: TensorFlow, Keras, PyTorch, Scikit-learn</li>
-                    <li>Data Visualization and Analysis: Pandas, NumPy, Matplotlib, Seaborn</li>
-                    <li>Big Data Technologies: Hadoop, Spark, Hive, Impala</li>
-                </ul>
-                <h3>Soft Skills</h3>
-                <ul>
-                    <li>Analytical and detail-oriented</li>
-                    <li>Big-picture thinking</li>
-                    <li>Quick learner and adaptable</li>
-                    <li>Excellent communicator and collaborator</li>
-                </ul>
+                <!-- <img class="skill-button" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="python"/>
+                <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> -->
+                    <div id="skill-group-container">
+                        <button class="skill-group active" onclick="filterSelection('all')"> Show all</button>
+                        <button class="skill-group" onclick="filterSelection('programming')"> Programming</button>
+                        <button class="skill-group" onclick="filterSelection('ml')"> AI & ML</button>
+                        <button class="skill-group" onclick="filterSelection('data')"> Data</button>
+                        <button class="skill-group" onclick="filterSelection('pkg')"> Tools & Packages</button>
+                        <!-- <button class="skill-group" onclick="filterSelection('bigdata')"> Bigdata</button> -->
+                        <button class="skill-group" onclick="filterSelection('devops')"> Agile & Devops</button>
+                        <button class="skill-group" onclick="filterSelection('concepts')"> Concepts</button>
+                    </div>
+                    <div class="skill-container">
+                        <!-- <ul>
+                            <li>Programming Languages:  -->
+                        <div class="filterDiv programming ml"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"/> Python</button></div>
+                        <div class="filterDiv ml concepts"><button class="skill-button"><img src="images/ml_icon.png"/>Machine Learning</button></div>
+                        <div class="filterDiv ml concepts"><button class="skill-button"><img src="images/ai_icon.png"/>Artificial Intelligence</button></div>
+                        <div class="filterDiv data concepts"><button class="skill-button"><img src="https://banner2.cleanpng.com/20181026/btq/kisspng-data-warehouse-computer-icons-vector-graphics-roya-big-data-glossary-5-terms-defined-geotab-5bd2b7028c6747.0336104315405360665751.jpg"/>Data Warehousing</button></div>
+                        <div class="filterDiv data concepts"><button class="skill-button"><img src="images/ds_icon.png"/>Data Science</button></div>
+                        <div class="filterDiv ml concepts"><button class="skill-button"><img src="https://banner2.cleanpng.com/20180529/szp/kisspng-predictive-analytics-computer-icons-data-analysis-statistical-information-analysis-5b0cec88d84259.6616491515275736408858.jpg"/>Predictive Analytics</button></div>
+                        <div class="filterDiv ml concepts"><button class="skill-button"><img src="images/nlp_icon.png"/>Natual Language Processing</button></div>
+                        <div class="filterDiv data concepts"><button class="skill-button"><img src="images/etl_icon.png"/>ETL</button></div>
+                        <div class="filterDiv data ml pkg"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg"/>Pandas</button> </div>
+                        <div class="filterDiv ml pkg"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg"/>NumPy</button> </div>
+                        <div class="filterDiv programming data"><button class="skill-button"><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png"/>SQL</button></div>
+                        <div class="filterDiv ml pkg"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg"/>Scikit-learn</button> </div>
+                        <div class="filterDiv ml pkg"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"/>TensorFlow</button> </div>
+                        <div class="filterDiv ml pkg"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original.svg"/>Keras</button> </div>
+                        <div class="filterDiv ml pkg"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg"/>PyTorch</button></div>
+                        <div class="filterDiv programming data"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachespark/apachespark-original-wordmark.svg"/>PySpark</button></div>
+                        <div class="filterDiv programming"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg"/>Shell Scripting</button></div>
+                        <div class="filterDiv programming ml"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg"/>R</button></div>
+                        <div class="filterDiv programming"><button class="skill-button"><img src="https://www.vectorlogo.zone/logos/microsoft_vb/microsoft_vb-icon.svg"/>VBA Macro</button></div>
+
+                        <div class="filterDiv pkg data"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg"/>Matplotlib</button> </div>
+                        <div class="filterDiv pkg data"><button class="skill-button"><img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg"/>Seaborn</button></div>
+                    <!-- </li>
+                    <li>Big Data Technologies:  -->
+                        <div class="filterDiv data"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hadoop/hadoop-original.svg"/>Hadoop</button></div>
+                        <div class="filterDiv data"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachespark/apachespark-original.svg"/>Spark</button></div>
+                        <div class="filterDiv data"><button class="skill-button"><img src="https://www.clipartmax.com/png/small/435-4359583_apache-hive-logo-hive-hadoop.png"/>Hive</button></div>
+                        <div class="filterDiv data"><button class="skill-button"><img src="https://upload.wikimedia.org/wikipedia/en/2/20/Apache_Impala_Logo.svg"/>Impala</button></div>
+
+                        <div class="filterDiv devops concepts"><button class="skill-button"><img src="https://banner2.cleanpng.com/20180608/xkf/kisspng-continuous-integration-continuous-delivery-devops-session-initiation-protocol-5b1b08f23228b8.5002680215284984182055.jpg"/>CI/CD</button></div>
+                        <div class="filterDiv devops"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"/>git</button></div>
+                        <div class="filterDiv devops"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"/>docker</button></div>
+
+                        <div class="filterDiv data pkg"><button class="skill-button"><img src="https://www.vectorlogo.zone/logos/informatica/informatica-icon.svg"/>Informatica</button></div>
+                        <div class="filterDiv data pkg"><button class="skill-button"><img src="https://www.vectorlogo.zone/logos/talend/talend-icon.svg"/>Talend</button></div>
+                        <div class="filterDiv data concepts"><button class="skill-button"><img src="images/dm_icon.png"/>Data Modeling</button></div>
+                        <div class="filterDiv data"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg"/>Oracle</button></div>
+                        <div class="filterDiv data"><button class="skill-button"><img src="https://upload.wikimedia.org/wikipedia/en/0/0f/Teradata_logo_%282024%29.svg"/>Teradata</button></div>
+                        <div class="filterDiv devops concepts"><button class="skill-button"><img src="images/agile_icon.png"/>Agile</button></div>
+                        <div class="filterDiv pkg"><button class="skill-button"><img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg"/>Excel</button></div>
+                        <div class="filterDiv pkg devops"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"/>Jira</button></div>
+                        <div class="filterDiv pkg devops"><button class="skill-button"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/confluence/confluence-original.svg"/>Confluence</button></div>
+                        
+
+                        <!-- <div class="filterDiv devops"><button class="skill-button">git</button></div> -->
+                    <!-- </li>
+                </ul> -->
+                        <!-- <br><br><h3>Soft Skills</h3>
+                        <button class="skill-button">Analytical and detail-oriented</button>
+                        <button class="skill-button">Big-picture thinking</button>
+                        <button class="skill-button">Quick learner and adaptable</button> -->
+                    </div>
+            </section>
+            <section id="softskills">
+                <div class="skill-container">
+                    <h3>Soft Skills</h3>
+                        <button class="skill-button">Analytical and detail-oriented</button>
+                        <button class="skill-button">Big-picture thinking</button>
+                        <button class="skill-button">Quick learner and adaptable</button>
+                </div>
+            </section>
+            <section id="hobbies">
+                <div class="skill-container">
+                    <h3>Interests & Hobbies</h3>
+                        <button class="skill-button">
+                            <a href="https://infopartha.blogspot.com/p/parthograhy_13.html" target="_blank">
+                                <img src="https://banner2.cleanpng.com/20180216/hjw/kisspng-camera-logo-photography-clip-art-photography-symbol-cliparts-5a869f6a655221.965669281518772074415.jpg"/>
+                                Photography
+                            </a>
+                        </button>
+                        <button class="skill-button">History & Heritage</button>
+                        <button class="skill-button">Tamil</button>
+                </div>
             </section>
             <section id="projects">
                 <h1>Projects</h1>
@@ -99,106 +174,3 @@
 </body>
 </html>
 
-
-
-
-<!--
-<!DOCTYPE html>
-<html lang="en" class=" js ">
-    <head>
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <title>Parthasarathy Rajendiran - Portfolio</title>
-
-        <style>
-            body {
-                font-size: 20px;
-                font-family: sans-serif;
-            }
-
-            img {
-                overflow-clip-margin: content-box;
-                overflow: clip;
-            }
-
-            .wrapper {
-                display: flex;
-            }
-
-            .main {
-                width: 75%;
-                height: 200vh;
-                min-height: 1000px;
-                display: flex;
-                flex-direction: column;
-                padding-left: 10px;
-                background: #fff;
-            }
-
-            .sidebar {
-                display: flex;
-                flex-direction: column;
-                width: 25%;
-                height: 100vh;
-                min-height: 200px;
-                max-width: 200px;
-                overflow: auto;
-                position: -webkit-sticky;
-                position: sticky;
-                top: 10px;
-                padding-left: 30px;
-                padding-top: 30px;
-                padding-right: 30px;
-                justify-content: center;
-                background: #99ccff;
-            }
-
-
-
-            .avatar-container {
-                position: relative;
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
-                overflow: hidden;
-                display: flex;
-                flex-direction: row-reverse;
-            }
-
-            .avatar {
-                display: flex;
-                flex-direction: column;
-                height: auto;
-                vertical-align: top;
-            }
-
-            .avatar img {
-                width: 100%;
-                height: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="wrapper">
-            <div class="sidebar">
-                <div class="avatar-container">
-                    <div class="avatar">
-                        <img src="images/IMG_1263.JPG" alt="avatar">
-                    </div>
-                </div>
-                <h4> Parthasarathy Rajendiran </h4>
-                <ul>
-                    <li>
-                        <a href="https://github.com/infopartha/">
-                            <i class="fab fa-github"></i>GitHub
-                        </a>
-                    </li>
-                    <li>linkedin</li>
-                </ul>
-            </div>
-        </div>
-    </body>
-</html>
--->
