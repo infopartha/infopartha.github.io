@@ -7,6 +7,7 @@ body {
 
 .navbar {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     position: fixed;
     top: 0;
@@ -22,10 +23,14 @@ body {
     text-decoration: none;
 }
 
-.menus a:hover {
-    background-color: #ddd;
-    color: black;
-    text-decoration:solid;
+/* Adjustment to the scroll position for the sections not be covered because of fixed navbar */
+html {
+    scroll-padding-top: 40px;
+}
+
+section {
+    scroll-snap-align: start;
+    scroll-margin-top: 40px;
 }
 
 .wrapper {
@@ -34,10 +39,9 @@ body {
 }
 
 .main {
-    width: 75%;
-    min-height: 1000px;
+    width: 100%;
+    /* min-height: 1000px; */
     padding: 20px;
-    background: #fff;
 }
 
 .sidebar {
@@ -48,8 +52,8 @@ body {
     max-width: 200px;
     position: sticky;
     top: 50px; 
-    padding: 30px;
-    background: #99ccff;
+    padding: 20px;
+    box-sizing: content-box;
 }
 
 .avatar-container {
@@ -65,8 +69,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -100,10 +106,6 @@ body {
 
 section {
     margin-bottom: 40px;
-}
-
-h1, h2 {
-    color: #333;
 }
 
 /* The switch - the box around the slider */
@@ -147,11 +149,13 @@ h1, h2 {
 }
 
 input:checked + .slider {
-    background-color: #2196F3;
+    /* background-color: #2196F3; */
+    background-color: #000000;
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    /* box-shadow: 0 0 1px #2196F3; */
+    box-shadow: 0 0 1px #000000;
 }
 
 input:checked + .slider:before {
@@ -178,6 +182,10 @@ body {
     color: #000000;
 }
 
+.main {
+    background: #fff;
+}
+
 .navbar {
     /* background-color: #555; */
     background-color: #336699;
@@ -191,6 +199,14 @@ body {
     background-color: #ddd;
     color: black;
     text-decoration:solid;
+}
+
+.sidebar {
+    background: #99ccff;
+}
+
+h1, h2 {
+    color: #333;
 }
 
 /********************/
@@ -379,19 +395,29 @@ body.dark-mode .content a:visited {
 }
 
 #contact-form button {
-    background-color: #333;
-    color: #fff;
+    background-color: #c2c2c2;
+    color: #333;
     border: none;
     cursor: pointer;
 }
 
 #contact-form button:hover {
-    background-color: #555;
+    background-color: #666;
+    color: #fff;
+}
+
+body.dark-mode #contact-form button {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode #contact-form button:hover {
+    background-color: #c2c2c2;
+    color: #333;
 }
 
 
 footer {
-    /* background-color: #333; */
     background-color: #336699;
     color: #f2f2f2;
     padding: 10px 0;
