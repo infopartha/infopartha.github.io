@@ -1,5 +1,5 @@
 body {
-    font-size: 20px;
+    font-size: 1.22rem;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
@@ -16,9 +16,9 @@ body {
 }
 
 .navbar a {
-    /*display: block;*/
     float: left;
     text-align: center;
+    font-size: 1.25rem;
     padding: 14px 20px;
     text-decoration: none;
 }
@@ -31,6 +31,7 @@ html {
 section {
     scroll-snap-align: start;
     scroll-margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .wrapper {
@@ -54,6 +55,7 @@ section {
     top: 50px; 
     padding: 20px;
     box-sizing: content-box;
+    transition: width 0.3s ease;
 }
 
 .avatar-container {
@@ -93,6 +95,7 @@ section {
 
 .sidebar ul li a {
     color: #333;
+    font-size: 1.2rem;
     text-decoration: none;
 }
 
@@ -104,8 +107,43 @@ section {
     margin-right: 10px;
 }
 
-section {
-    margin-bottom: 40px;
+/* Sidebar collapsed state */
+.sidebar.collapsed {
+    width: 50px;
+    overflow: hidden;
+}
+
+.sidebar.collapsed ul,
+.sidebar.collapsed h4 {
+    display: none; /* Hide content when collapsed */
+}
+
+.social-icons {
+    display: none;
+}
+
+/* Show only social media icons when collapsed */
+.sidebar.collapsed .social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 70px;
+}
+
+.sidebar.collapsed .avatar-container {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.sidebar.collapsed .social-icons a {
+    margin: 10px 0;
+}
+
+.sidebar.collapsed .social-icons a i {
+    color: #333;
+    font-size: 1.5rem; 
+    padding-left: 10px;
 }
 
 /* The switch - the box around the slider */
@@ -187,7 +225,6 @@ body {
 }
 
 .navbar {
-    /* background-color: #555; */
     background-color: #336699;
 }
 
@@ -227,6 +264,10 @@ body.dark-mode .sidebar {
 }
 
 body.dark-mode .sidebar a {
+    color: #f2f2f2;
+}
+
+body.dark-mode .sidebar.collapsed .social-icons a i {
     color: #f2f2f2;
 }
 
@@ -331,7 +372,7 @@ body.dark-mode footer {
     border: none;
     text-align: left;
     outline: none;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -346,13 +387,13 @@ body.dark-mode footer {
     display: none;
     overflow: hidden;
     background-color: #f1f1f1;
-    /* max-height: 0;
-    transition: max-height 0.2s ease-out;   */
+    max-height: 10;
+    transition: max-height 0.2s ease-out;  
 }
 
 .collapsible:after {
     content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
+    font-size: 0.8rem;
     color: white;
     float: right;
     margin-left: 5px;
@@ -444,3 +485,77 @@ footer {
 .footer-links a {
     margin: 0 10px;
 }
+
+
+@media (max-width: 650px) {
+    .navbar a {
+        font-size: 1rem;
+        padding: 14px 10px;
+    }
+
+    .sidebar h4 {
+        font-size: 1.1rem;
+        margin: 0 0 15px 0;
+    }
+
+    .sidebar ul li a {
+        font-size: 1rem; 
+    }
+}
+
+
+@media (max-width: 450px) {
+    body {
+        font-size: 1rem;
+    }
+    .navbar a {
+        font-size: 0.9rem;
+        padding: 14px 7px;
+    }
+
+    .switch {
+        width: 35px;
+        height: 20px;
+    }
+
+    .slider:before {
+        height: 14px;
+        width: 14px;
+        left: 3.5px;
+        bottom: 3.5px;
+    }
+        
+    .sidebar h4 {
+        font-size: 1rem;
+        margin: 0 0 15px 0;
+    }
+
+    .sidebar ul li {
+        margin: 8px 0;
+    }
+    
+    .sidebar ul li a {
+        font-size: 0.9rem; 
+    }
+
+    .sidebar.collapsed {
+        width: 15px;
+    }
+
+    .sidebar.collapsed .avatar-container {
+        margin-left: 2px;
+    }
+    
+    .sidebar.collapsed .social-icons a i {
+        font-size: 1rem; 
+        padding-left: 0.8px;
+    }
+    
+    .collapsible {
+        padding: 15px;
+        width: 100%;
+        font-size: 1rem;
+      }
+      
+}
+

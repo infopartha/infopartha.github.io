@@ -87,3 +87,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
   });
 });
+
+
+document.addEventListener('scroll', function() {
+  const aboutSection = document.getElementById('about');
+  const sidebar = document.querySelector('.sidebar');
+  const aboutSectionPosition = aboutSection.getBoundingClientRect().top;
+
+  if (aboutSectionPosition < 0) { // Change condition as needed
+      sidebar.classList.add('collapsed');
+  } else {
+      sidebar.classList.remove('collapsed');
+  }
+});
